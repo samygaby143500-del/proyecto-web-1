@@ -5,532 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--FUENTES Y RECURSOS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-
-
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-
-
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-
-
-
-
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
 
+    <!--LINK PARA CSS-->
+    <link rel="stylesheet" href="../style.css">
 
-
-    <style>
-    
-        * {
-            font-family: "Roboto Mono", monospace;
-           
-        }
-
-        .contenedor {
-            background-color: rgba(0, 0, 0, 0.514);
-            background-image: url(./assets/img/Developer\ mode\ on.jpg);
-            background-position-x: right;
-            background-position-y: bottom;
-            background-size: 1100px;
-            height: 600px;
-        }
-
-        .contenedor .nav-principal {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .contenedor .lista-encabezado ul {
-            display: flex;
-            list-style: none;
-            gap: 100px;
-            font-weight: 600;
-            font-size: 20px;
-        }
-
-        .lista-encabezado a {
-            text-decoration: none;
-            color: rgb(255, 255, 255);
-        }
-
-        .logo-encabezado img {
-            padding: 15px;
-            width: 60px;
-        }
-
-        .titulo-imagen {
-            color: rgb(255, 255, 255);
-            position: relative;
-            bottom: -150px;
-            left: 20px;
-            font-weight: 900;
-            font-size: 50px;
-
-        }
-
-        .btn-img {
-            position: relative;
-            bottom: -150px;
-            left: 20px;
-        }
-
-        .btn-img button {
-            padding: 10px 15px;
-            border: none;
-
-            background-color: rgba(128, 255, 0, 0.685);
-
-        }
-
-        .btn-img a {
-            text-decoration: none;
-            color: black;
-            font-size: 15px;
-            font-weight: 600;
-        }
-
-        span {
-            background-color: aliceblue;
-            border-radius: 30px;
-            padding: 5px;
-            margin: 10px;
-
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        span:hover {
-            background-color: rgba(240, 248, 255, 0.733);
-
-        }
-
-        /*FIN CSS HEADER*/
-
-
-        /*CSS BANNER*/
-
-        aside {
-            height: 50px;
-            background-color: chartreuse;
-            padding: 15px 15px;
-            font-size: 20px;
-            font-weight: 900;
-            text-decoration: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: black;
-            padding: 20px;
-        }
-
-        /*FIN CSS BANNER-------------------------------------------*/
-
-
-
-        /*CSS MAIN*/
-        .muestra {
-            display: flex;
-            justify-content: space-around;
-            background-color: rgba(12, 2, 33, 0.842);
-            color: white;
-            margin: 15px;
-            border: 2px solid chartreuse;
-            border-radius: 30px;
-
-        }
-
-        .muestra:hover {
-            box-shadow: 5px 5px 15px chartreuse;
-
-        }
-
-        .muestra-img {
-            width: 75%;
-            margin: 80px;
-            gap: 40px;
-            border-right: 5px solid rgb(172, 249, 95);
-        }
-
-        .muestra-img img {
-            width: 250px;
-            height: 400px;
-            margin: 20px 10px;
-            object-fit: cover;
-           
-            box-shadow: 5px 5px 15px rgba(12, 2, 33, 0.842);
-            border: 2px solid rgba(0, 0, 0, 0.404);
-            transition: all 0.3s ease;
-        }
-
-        .muestra-img img:hover {
-            width: 300px;
-            border: none;
-            box-shadow: 5px 5px 15px rgb(0, 0, 0);
-            transform: scale(1.0005);
-        }
-
-        .muestra-info {
-            display: flex;
-            flex-direction: column;
-            width: 50%;
-            font-size: 60px;
-            text-align: center;
-            height: 50%;
-            margin: 350px 50px;
-
-        }
-
-        .muestra-info p {
-            font-size: 20px;
-            font-weight: 300;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-        }
-
-        .muestra-info h1 {
-            font-size: 50px;
-            letter-spacing: 5px;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-
-        }
-
-        .muestra-info button {
-            padding: 15px 30px;
-            border: none;
-            background-color: rgba(128, 255, 0, 0.599);
-            font-size: 20px;
-            font-weight: 600;
-            width: 200px;
-            box-shadow: 5px 5px 15px rgb(0, 0, 0);
-            
-        }
-
-        .btn-ver {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            margin: 100px 30px;
-        }
-
-
-        /*FIN CSS MAIN---------------------------------------------*/
-
-
-
-
-
-
-        .contenedor-cartas {
-            display: flex;
-            gap: 100px;
-            justify-content: center;
-            background-color: rgba(12, 2, 33, 0.842);
-            margin: 15px;
-            padding: 45px;
-            border: 2px solid chartreuse;
-            border-radius: 30px;
-
-        }
-
-        .contenedor-cartas:hover {
-            box-shadow: 5px 5px 15px chartreuse;
-
-        }
-
-        .contenedor-cartas .cartas-titulo {
-            color: rgb(246, 246, 246);
-            position: relative;
-            bottom: -250px;
-            width: 20%;
-            left: 60px;
-            font-size: 50px;
-            font-size: 30px;
-        }
-
-        /*CSS CARD*/
-        .container {
-            font-family: "Inter", sans-serif;
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
-            max-width: 1900px;
-            margin: 0 auto;
-            justify-content: center;
-        }
-
-        .card {
-            background-color: rgba(114, 115, 113, 0.432);
-            width: 500px;
-            border-radius: 40px;
-            cursor: pointer;
-
-            transition: background-color 0.3s ease;
-
-        }
-
-        .card:hover {
-            box-shadow: rgba(128, 255, 0, 0.57) 1px 4px 14px;
-            transform: scale(1.005);
-        }
-
-        .card .opciones-edad {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-        }
-
-        .botones-edad {
-            display: flex;
-            width: 55%;
-            gap: 15px;
-
-        }
-
-        .card .opciones-edad button {
-            background-color: rgba(255, 255, 255, 0.952);
-            border: none;
-            border-radius: 25px;
-            padding: 9px 14px;
-            font-size: 15px;
-            font-weight: 600;
-            width: 50%;
-            cursor: pointer;
-
-            transition: background-color 0.3s ease;
-
-        }
-
-        .botones-edad button:hover {
-            box-shadow: rgba(0, 0, 0, 0.445) 0px 5px 15px;
-            transform: scale(1.005);
-            color: rgba(14, 14, 14, 0.756);
-            background-color: rgba(255, 255, 255, 0.747);
-        }
-
-        h1 {
-            font-weight: 800;
-            font-size: 35px;
-        }
-
-        p {
-            font-size: 15px;
-            font-weight: 600;
-            color: white;
-        }
-
-        .opciones-edad .logo-marca img {
-            border-radius: 50px;
-            width: 60px;
-        }
-
-        .opciones-info {
-            padding: 35px;
-        }
-
-        .img-edad img {
-            width: 100%;
-            border-radius: 40px;
-            height: 500px;
-            object-fit: cover;
-            cursor: pointer;
-
-            transition: background-color 0.3s ease;
-        }
-
-        .img-edad img:hover {
-            box-shadow: rgba(0, 0, 0, 0.39) 0px 5px 15px;
-            transform: scale(1.0005);
-
-        }
-
-        .btn-mas {
-            display: flex;
-            justify-content: space-between;
-            width: 50%;
-            background-color: rgba(255, 255, 255, 0.32);
-            border-radius: 30px;
-            padding: 0px 15px;
-            cursor: pointer;
-
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-mas button {
-            background-color: transparent;
-            border: none;
-            border-radius: 5px;
-            font-size: 12px;
-            font-weight: 600;
-            padding: 0;
-            color: rgba(0, 0, 0, 0.783);
-
-        }
-
-        .btn-mas:hover {
-            box-shadow: rgba(0, 0, 0, 0.704) 0px 5px 15px;
-            transform: scale(1.005);
-
-        }
-
-        .btn-mas span {
-            background-color: rgb(255, 255, 255);
-            padding: 5x;
-            border-radius: 20px;
-            color: rgba(0, 0, 0, 0.913);
-        }
-
-        .btn-mas a,
-        .btn-mas button {
-            padding: 0px;
-        }
-
-        .probar {
-            padding: 15px;
-        }
-
-        /*CSS TALLERES SEXTO*/
-        .cartas-sexto {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            background-color: rgba(12, 2, 33, 0.842);
-            margin: 15px;
-            padding: 45px;
-            border: 2px solid chartreuse;
-            border-radius: 30px;
-
-        }
-
-        .cartas-sexto:hover {
-            box-shadow: 5px 5px 15px chartreuse;
-
-        }
-
-
-        .cartas-sexto .sexto {
-            
-            background-color: rgba(0, 0, 0, 0.734);
-            border-radius: 30px;
-            padding: 45px;
-            color: chartreuse
-        }
-
-        .sexto p {
-            font-size: 15px;
-            width: 70%;
-        }
-
-        .sexto {
-            padding: 15px;
-            gap: 30px;
-
-        }
-
-        .sexto img {
-            width: 250px;
-            height: 200px;
-            object-fit: cover;
-         
-            margin: 0px 10px;
-            padding: 0px;
-            transition: all 0.3s ease;
-        }
-
-        .sexto img:hover {
-            box-shadow: 1px 1px 11px chartreuse;
-            transform: scale(1.05);
-        }
-
-
-
-
-
-
-        /*CSS FOOTER*/
-
-        .contacto {
-            text-align: center;
-            gap: 100px;
-            background-color: rgba(0, 0, 0, 0.938);
-            margin: 15px;
-            padding: 45px;
-            border-radius: 30px;
-            border: 2px solid chartreuse;
-            color: white;
-
-            transition: all 0.3s ease;
-        }
-
-        .contacto:hover {
-            box-shadow: 5px 5px 15px rgba(0, 0 , 0, 0.925);
-            transform: scale(1.005);
-        }
-
-
-        .contacto h2 {
-            font-size: 40px;
-            color: chartreuse;
-        }
-
-        .contacto .cont-numeros {
-            display: flex;
-            gap: 50px;
-            justify-content: center;
-
-        }
-
-        .cont-redes {
-            display: flex;
-            justify-content: center;
-            padding: 0;
-        }
-
-        .cont-redes li {
-            list-style: none;
-        }
-
-        .cont-redes img {
-            width: 40px;
-            border-radius: 30px;
-        }
-        a{
-            text-decoration: none;
-            color: white;
-        }
-    </style>
 </head>
 
 <body>
+    <!--ENCABEZADO-->
     <header>
+        <!-- Uso <section> para agrupar todos los elementos del encabezado -->
         <section class="contenedor">
-            <div class="nav-principal">
-                <div class="logo-encabezado">
+            <!-- Este contenedor tiene un fondo con imagen-->
+            <div class="nav-principal"> <!-- clase para agrupar solo la primera fila del header-->
+                <div class="logo-encabezado"> <!-- contenedor para el logo -->
                     <a href=""><img src="./assets/img/descarga-Photoroom.png" alt="" width="40px"></a>
                 </div>
-                <div class="lista-encabezado">
+                <div class="lista-encabezado"> <!--contenedor de la lista-->
                     <ul>
                         <li><a href="">TALLERES</a></li>
                         <li><a href="">MUESTRA</a></li>
@@ -538,7 +45,7 @@
                         <li><a href="">ENTREVISTAS</a></li>
                     </ul>
                 </div>
-                <div class="ubicacion-encabezado">
+                <div class="ubicacion-encabezado"> <!--contenedor del icono de ubicacion-->
                     <a
                         href="https://www.google.com/maps/place/Centro+Educativo+Tecnica+N%C2%BA+30/@-38.9295634,-67.984997,18z/data=!4m6!3m5!1s0x960a30ef2ee4b6b3:0xf60599626c221a60!8m2!3d-38.9298451!4d-67.9856515!16s%2Fg%2F11c0w09lh4?entry=ttu&g_ep=EgoyMDI1MTExMC4wIKXMDSoASAFQAw%3D%3D"><span
                             class="material-symbols-outlined">
@@ -546,30 +53,34 @@
                         </span></a>
                 </div>
             </div>
-            <nav class="nav-img">
-                <div class="cont-titulo-img">
+            <nav class="nav-img"> <!--contenedor para la para la parte de lo que esta en la img del header-->
+                <div class="cont-titulo-img"> <!--contenedor titulo en el encabezado-->
                     <h1 class="titulo-imagen">
                         PROGRAMACION - WEB I
                     </h1>
                 </div>
-                <div class="btn-img">
+                <div class="btn-img"> <!-- contenedor del boton-->
                     <button><a
                             href="https://www.google.com/search?q=cet+30&rlz=1C1VDKB_enAR1172AR1172&oq=cet+30&gs_lcrp=EgZjaHJvbWUqDwgAECMYJxjjAhiABBiKBTIPCAAQIxgnGOMCGIAEGIoFMhUIARAuGCcYrwEYxwEYgAQYigUYjgUyBwgCEAAYgAQyBwgDEAAYgAQyCQgEEAAYChiABDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDIxMDFqMGo3qAIIsAIB8QU_t60efR4zdg&sourceid=chrome&ie=UTF-8#">MAS
                             INFORMACION</a></button>
                 </div>
             </nav>
-
         </section>
     </header>
-    <aside>
+
+    <!-- BANNER-->
+    <aside> <!--coloque un aside para algo extra-->
         <div>
-            <a href="https://campus.cet30.edu.ar/">CAMPUS - C.E.T Nº30 ></a>
+            <a href="https://campus.cet30.edu.ar/">CAMPUS - C.E.T Nº30 </a>
         </div>
     </aside>
+
+    <!--CONTENIDO PRINCIPAL -->
     <main>
-        <section>
-            <div class="muestra">
-                <div class="muestra-img">
+        <section> <!-- coloque una seccion para agrupar todo dentro del main y que sea vea mas ordenado-->
+            <!-- PARTE DE LA MUESTRA -->
+            <div class="muestra"> <!-- Esta parte muestra fotos e información sobre la muestra anual del colegio -->
+                <div class="muestra-img"> <!-- coimágenes con los proyectos de la muestra -->
                     <img src="./assets/img/b2dda96b-0e17-4eb8-ab9f-fd5360eabffc.jpg" alt="">
                     <img src="./assets/img/b2e53d8a-b0bc-4902-acfd-feeef20e49ed.jpg" alt="">
                     <img src="./assets/img/b72ab5cc-8072-4038-bcb6-ee230ca71874.jpg" alt="">
@@ -580,7 +91,7 @@
                     <img src="./assets/img/e4ffe12f-9cc4-4e75-9259-8c5016b88447.jpg" alt="">
                     <img src="./assets/img/b72ab5cc-8072-4038-bcb6-ee230ca71874.jpg" alt="">
                 </div>
-                <div class="muestra-info">
+                <div class="muestra-info"> <!-- para agrupar la descripcion y el titulo-->
                     <h1>MUESTRA ANUAL</h1>
                     <p>La muestra anual del CET N°30 es un evento institucional en el cual los alumnos presentan los
                         proyectos, trabajos prácticos y aplicaciones desarrolladas a lo largo del año. Es una instancia
@@ -588,35 +99,35 @@
                         especialidades técnicas, programación o producción, ante compañeros, docentes, familias y el
                         entorno productivo.
                     </p>
-                    <div class="btn-ver">
+                    <div class="btn-ver"> <!--para contender el boton y poder agruparlo como necesito-->
                         <button><a href="">VER MAS</a></button>
                     </div>
-
                 </div>
             </div>
-            <div class="contenedor-cartas">
+            <!--SECCION LISTAS-->
+            <div class="contenedor-cartas"> <!--clase de todas las cartas de cada lista -->
                 <h1 class="cartas-titulo">LISTAS 2026</h1>
-                <div class="card">
-                    <div class="opciones-info">
-                        <div class="opciones-edad">
-                            <div class="botones-edad">
+                <div class="card"> <!--clase para el contenedor de cada lista-->
+                    <div class="opciones-info"> <!-- contenedor para todo lo que esta sobre la imagen -->
+                        <div class="opciones-edad"> <!-- contenedor de la primera fila-->
+                            <div class="botones-edad"> <!--cont de btn-->
                                 <button>2025</button>
                                 <button>2026</button>
                             </div>
-                            <div class="logo-marca">
+                            <div class="logo-marca"> <!--contenedor del logo de la lista-->
                                 <img src="./assets/img/lista-roja.png" alt="logo">
                             </div>
                         </div>
-                        <div class="info-edad">
+                        <div class="info-edad"> <!-- Nombre de la lista y enlace al documento de propuestas -->
                             <h1 style="color: rgb(237, 76, 76);">LISTA ROJA</h1>
-                            <a href="https://drive.google.com/file/d/1BViDJ447mceHSzrUPcCTjWfbcVTw4DUT/view">...</a>
+                            <a href="https://drive.google.com/file/d/1BViDJ447mceHSzrUPcCTjWfbcVTw4DUT/view">Leer propuestas - Cliquear aqui</a>
                         </div>
                     </div>
 
-                    <div class="img-edad">
+                    <div class="img-edad"> <!-- Imagen de los integrantes o cartel de campaña -->
                         <img src="./assets/img/cachedImage.png" alt="">
                     </div>
-                    <div class="probar">
+                    <div class="probar"> <!-- Botón que lleva a las redes sociales -->
                         <div class="btn-mas">
                             <button>Ver redes</button>
                             <a href="https://www.instagram.com/listaroja_cet30/#"><span
@@ -626,6 +137,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Las siguientes tarjetas repiten la misma estructura para otras listas -->
                 <div class="card">
                     <div class="opciones-info">
                         <div class="opciones-edad">
@@ -639,7 +152,7 @@
                         </div>
                         <div class="info-edad">
                             <h1 style="color: rgb(78, 139, 17);">LISTA VERDE</h1>
-                            <a href="https://drive.google.com/file/d/1rC-G7eh71ys6rshW8FQ0o9O_bZE_ymvR/view">...</a>
+                            <a href="https://drive.google.com/file/d/1rC-G7eh71ys6rshW8FQ0o9O_bZE_ymvR/view">Leer propuestas - Cliquear aqui</a>
                         </div>
                     </div>
 
@@ -656,6 +169,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Las siguientes tarjetas repiten la misma estructura para otras listas -->
                 <div class="card">
                     <div class="opciones-info">
                         <div class="opciones-edad">
@@ -669,7 +184,7 @@
                         </div>
                         <div class="info-edad">
                             <h1 style="color: rgb(210, 122, 34);">LISTA NARANJA</h1>
-                            <a href="https://youtu.be/imlqiuFL2yA">...</a>
+                            <a href="https://youtu.be/imlqiuFL2yA">Leer propuestas - Cliquear aqui</a>
                         </div>
                     </div>
 
@@ -686,9 +201,10 @@
                     </div>
                 </div>
             </div>
-            <div class="cartas-sexto">
+            <!-- ============ SECCIÓN DE TALLERES DE SEXTO ============ -->
+            <div class="cartas-sexto">   <!-- Esta parte muestra los talleres de los alumnos de sexto año -->
                 <div class="sexto">
-                    <div>
+                    <div><!-- Galería de imágenes del taller de Programación -->
                         <img src="./assets/img/programacion-6to.jpeg" alt="">
                         <img src="./assets/img/prog-gto3.jpeg" alt="">
                         <img src="./assets/img/prog-6to-5.jpeg" alt="">
@@ -696,7 +212,7 @@
                     </div>
 
                     <h1>PROGRAMACION</h1>
-
+                     <!-- Galería de imágenes del taller de Robótica -->
                     <div>
                         <img src="./assets/img/robotica-6to4.jpeg" alt="">
                         <img src="./assets/img/robotica-6to3.jpeg" alt="">
@@ -704,16 +220,17 @@
                         <img src="./assets/img/robotica-6to.jpeg" alt="">
                     </div>
                     <h1>ROBOTICA</h1>
-                    <h1>PRACTICAS</h1>
                 </div>
+            </div>
         </section>
     </main>
+        <!-- =================== PIE DE PÁGINA =================== -->
     <footer>
-        <div class="contacto">
+        <div class="contacto"> <!-- Aquí coloco la información de contacto de la escuela para facilitar la comunicación -->
             <h2>
                 COMUNICATE CON LA ESCUELA
             </h2>
-            <div class="cont-numeros">
+            <div class="cont-numeros">  <!-- Números de contacto de las distintas áreas -->
                 <p>TELEFONO FIJO - 4783676</p>
                 <p>PRECEPTORIA - 2995862049</p>
                 <p>TALLER - 2996001486 </p>
@@ -722,6 +239,7 @@
             <h3>
                 SOLO WHATSAPP
             </h3>
+            <!-- Enlaces a redes sociales del colegio -->
             <ul class="cont-redes">
                 <li><a href="https://www.instagram.com/cet30cipo/?next=%2F#"><img src="./assets/img/instagram.png"
                             alt=""></a></li>
