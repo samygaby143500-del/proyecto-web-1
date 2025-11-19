@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CET N°30 - Programación Web I</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&family=Roboto+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    :root {
+      --verde: #8fff00;
+      --verde-oscuro: #6ad400;
+      --fondo: #0f0f0f;
+      --texto-claro: #f5f5f5;
+      --gris: #bdbdbd;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Roboto Mono", monospace;
+      transition: all 0.3s ease-in-out;
+    }
+
+    body {
+      background: linear-gradient(180deg, #101010, #1a1a1a);
+      color: var(--texto-claro);
+      scroll-behavior: smooth;
+    }
+
+    /* ENCABEZADO */
+    .contenedor {
+      position: relative;
+      background-image: url(./assets/img/Developer\ mode\ on.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .contenedor::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .nav-principal {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+    }
+
+    .logo-encabezado img {
+      width: 60px;
+    }
+
+    .lista-encabezado ul {
+      display: flex;
+      list-style: none;
+      gap: 40px;
+    }
+
+    .lista-encabezado a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .lista-encabezado a:hover {
+      color: var(--verde);
+      text-shadow: 0 0 10px var(--verde);
+    }
+
+    .titulo-imagen {
+      position: relative;
+      z-index: 2;
+      color: var(--verde);
+      font-size: 60px;
+      font-weight: 900;
+      margin-left: 60px;
+      margin-top: 150px;
+      letter-spacing: 3px;
+    }
+
+    .btn-img {
+      position: relative;
+      z-index: 2;
+      margin-left: 60px;
+    }
+
+    .btn-img button {
+      background: linear-gradient(90deg, var(--verde), var(--verde-oscuro));
+      border: none;
+      border-radius: 30px;
+      padding: 12px 25px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(143, 255, 0, 0.4);
+    }
+
+    .btn-img button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px var(--verde);
+    }
+
+    .btn-img a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    /* BANNER */
+    aside {
+      background: var(--verde);
+      padding: 10px 0;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    aside a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    /* MUESTRA */
+    .muestra {
+      display: flex;
+      justify-content: space-around;
+      background-color: rgba(255, 255, 255, 0.05);
+      margin: 40px;
+      border: 2px solid var(--verde);
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(143, 255, 0, 0.2);
+    }
+
+    .muestra-img {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 60%;
+      padding: 20px;
+    }
+
+    .muestra-img img {
+      width: 180px;
+      height: 280px;
+      object-fit: cover;
+      margin: 10px;
+      border-radius: 15px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .muestra-img img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 10px var(--verde);
+    }
+
+    .muestra-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 40%;
+      padding: 40px;
+      text-align: justify;
+    }
+
+    .muestra-info h1 {
+      font-size: 40px;
+      color: var(--verde);
+    }
+
+    .muestra-info p {
+      margin-top: 20px;
+      line-height: 1.5;
+      color: var(--gris);
+    }
+
+    .muestra-info button {
+      margin-top: 30px;
+      background: var(--verde);
+      color: #000;
+      border: none;
+      border-radius: 20px;
+      padding: 12px 20px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .muestra-info button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px var(--verde);
+    }
+
+    /* TARJETAS */
+    .contenedor-cartas {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 2px solid var(--verde);
+      border-radius: 25px;
+      padding: 60px 20px;
+      margin: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(143, 255, 0, 0.4);
+      border-radius: 20px;
+      width: 320px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px var(--verde);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .info-edad h1 {
+      margin: 15px 0;
+      font-size: 22px;
+    }
+
+    .info-edad p {
+      color: var(--gris);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .btn-mas {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 30px;
+      width: fit-content;
+      margin: 0 auto 20px;
+    }
+
+    .btn-mas button {
+      background: none;
+      border: none;
+      color: var(--texto-claro);
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-mas:hover {
+      box-shadow: 0 0 10px var(--verde);
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #0e0e0e;
+      color: var(--gris);
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 2px solid var(--verde);
+    }
+
+    footer h2 {
+      color: var(--verde);
+      margin-bottom: 15px;
+    }
+
+    .cont-numeros {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 20px;
+    }
+
+    .cont-redes {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .cont-redes img {
+      width: 40px;
+      filter: grayscale(100%);
+      transition: 0.3s;
+    }
+
+    .cont-redes img:hover {
+      filter: drop-shadow(0 0 8px var(--verde)) brightness(2);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <section class="contenedor">
+      <div class="nav-principal">
+        <div class="logo-encabezado">
+          <img src="./assets/img/descarga-Photoroom.png" alt="logo" />
+        </div>
+        <div class="lista-encabezado">
+          <ul>
+            <li><a href="#">TALLERES</a></li>
+            <li><a href="#">MUESTRA</a></li>
+            <li><a href="#">LISTAS</a></li>
+            <li><a href="#">ENTREVISTAS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h1 class="titulo-imagen">PROGRAMACIÓN - WEB I</h1>
+        <div class="btn-img">
+          <button><a href="#">MÁS INFORMACIÓN</a></button>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <aside>
+    <a href="https://campus.cet30.edu.ar/">CAMPUS - C.E.T Nº30 ></a>
+  </aside>
+
+  <main>
+    <section class="muestra">
+      <div class="muestra-img">
+        <img src="./assets/img/b2dda96b-0e17-4eb8-ab9f-fd5360eabffc.jpg" alt="">
+        <img src="./assets/img/b2e53d8a-b0bc-4902-acfd-feeef20e49ed.jpg" alt="">
+        <img src="./assets/img/b72ab5cc-8072-4038-bcb6-ee230ca71874.jpg" alt="">
+        <img src="./assets/img/d5ddfd10-4935-48fd-9d90-1097df2fb40d.jpg" alt="">
+      </div>
+      <div class="muestra-info">
+        <h1>MUESTRA ANUAL</h1>
+        <p>La muestra anual del CET N°30 es un evento institucional donde los alumnos presentan proyectos y
+          desarrollos realizados durante el año. Es una instancia de cierre donde los estudiantes muestran lo aprendido
+          en talleres, programación y especialidades técnicas.</p>
+        <button>VER MÁS</button>
+      </div>
+    </section>
+
+    <section class="contenedor-cartas">
+      <div class="card">
+        <img src="./assets/img/cachedImage.png" alt="">
+        <div class="info-edad">
+          <h1 style="color: #e63a3a;">LISTA ROJA</h1>
+          <p>Proyectos y propuestas de la lista roja 2026.</p>
+        </div>
+        <div class="btn-mas">
+          <button>Ver redes</button>
+          <a href="https://www.instagram.com/listaroja_cet30/#">
+            <span class="material-symbols-outlined">arrow_circle_right</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/img/lista-verde.jpeg" alt="">
+        <div class="info-edad">
+          <h1 style="color: #7ae63a;">LISTA VERDE</h1>
+          <p>Proyectos y propuestas de la lista verde 2026.</p>
+        </div>
+        <div class="btn-mas">
+          <button>Ver redes</button>
+          <a href="https://www.instagram.com/listaverde.cet30#">
+            <span class="material-symbols-outlined">arrow_circle_right</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./assets/img/lista-naranja.jpeg" alt="">
+        <div class="info-edad">
+          <h1 style="color: #ff962b;">LISTA NARANJA</h1>
+          <p>Proyectos y propuestas de la lista naranja 2026.</p>
+        </div>
+        <div class="btn-mas">
+          <button>Ver redes</button>
+          <a href="https://www.instagram.com/lncet30_/#">
+            <span class="material-symbols-outlined">arrow_circle_right</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h2>COMUNICATE CON LA ESCUELA</h2>
+    <div class="cont-numeros">
+      <p>📞 TELEFONO FIJO: 4783676</p>
+      <p>📱 PRECEPTORÍA: 2995862049</p>
+      <p>🔧 TALLER: 2996001486</p>
+    </div>
+    <h3>SOLO WHATSAPP</h3>
+    <ul class="cont-redes">
+      <li><a href="#"><img src="./assets/img/instagram.png" alt="Instagram"></a></li>
+      <li><a href="#"><img src="./assets/img/mail.png" alt="Mail"></a></li>
+      <li><a href="#"><img src="./assets/img/youtube.png" alt="YouTube"></a></li>
+    </ul>
+  </footer>
+</body>
+</html>
